@@ -104,7 +104,7 @@ body {
   background: #333;
   padding: 3rem;
   text-align: center;
-  height: 45%;
+  height: 100%;
 }
 
 .intro h1 {
@@ -124,7 +124,7 @@ body {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  height: 45%;
+  height: 100%;
 }
 
 .about-text-container {
@@ -222,7 +222,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 45%;
+  height: 100%;
 }
 
 .project-container {
