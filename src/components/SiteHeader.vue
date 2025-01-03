@@ -1,28 +1,33 @@
 <template>
-  <header class="header">
     <nav class="navbar">
       <ul class="nav-links">
-        <li><router-link v-bind:to="{ name : 'home'}">Home</router-link></li>
-        <li><router-link to="/about">About</router-link></li>
-        <li><router-link to="/portfolio">Portfolio</router-link></li>
-        <li><router-link to="/contact">Contact</router-link></li>
+        <li v-for="(link, index) in links" :key="index" class="link-icons">
+        <i :class="link.iconClass" alt=link.alt @click="pushToPage(link.name)"></i>
+        </li>
       </ul>
     </nav>
-  </header>
 </template>
 
-<style scoped>
-.header {
-  display: flex;
-  justify-content: end;
-  background-color: #222;
-  padding: 1.5rem 2rem;
-  position: sticky;
-  top: 0;
-  width: 100;
-  z-index: 1000;
+<script>
+export default {
+  data(){
+    return{
+      links: [
+        {name: "home", iconClass: "fa fa-home", title: "Home"},
+        {name: "about", iconClass: "fa fa-id-badge", title: "About me"},
+        {name: "projects", iconClass: "fa fa-briefcase", title: "My Projects"}
+      ]
+    }
+  },
+  methods: {
+    pushToPage(pageName){
+      this.$router.push({name: pageName})
+    }
+  }
 }
+</script>
 
+<style scoped>
 
 .nav-links {
   display: flex;

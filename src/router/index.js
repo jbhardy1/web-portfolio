@@ -26,6 +26,7 @@ const router = createRouter({
   ],
 })
 
+/* Update Page title */
 router.beforeEach((to, from) => {
   document.title = to.meta?.title ?? 'JardyCodes'
 })
