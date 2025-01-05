@@ -17,6 +17,10 @@
           <i :class="icon.iconClass"></i>
           <strong class="tech-name">{{ icon.name }}</strong>
         </div>
+        <div v-for="(icon, index) in icons" :key=" 'duplicate-' + index" class="tech-icon">
+          <i :class="icon.iconClass"></i>
+          <strong class="tech-name">{{ icon.name }}</strong>
+        </div>
       </div>
     </span>
   </div>
@@ -69,7 +73,7 @@ export default {
 .intro {
   margin-top: auto;
   margin-bottom: auto;
-  margin-left: 10%;
+  margin-left: 15%;
   margin-right: 20%;
 }
 
@@ -118,23 +122,26 @@ export default {
 
 .tech-stack {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   margin-top: auto;
   margin-bottom: auto;
-  width: 40%;
+  width: 45%;
   height: 33%;
   border-style: solid;
-  border-radius: 5px;
+  border-radius: 20px;
   border-color: #292929;
   box-shadow: 0 8px 16px rgba(134, 133, 133, 0.2);
-  margin-right: 15%;
+  margin-right: 10%;
+  flex-wrap: nowrap;
   overflow: hidden;
 }
 
 .tech-carousel {
   display: flex;
-  animation: scrollIcons 30s linear infinite;
+  width: 100%;
+  flex-wrap: nowrap;
+  animation: scrollIcons 10s linear infinite;
 }
 
 .tech-icon {
@@ -143,7 +150,7 @@ export default {
   justify-content: center;
   align-items: center;
   margin-right: 50px;
-  font-size: 3rem;
+  font-size: 5rem;
 }
 
 .tech-icon i:hover{
@@ -157,13 +164,14 @@ export default {
 }
 
 @keyframes scrollIcons {
-  0% {
+  from {
     transform: translateX(0);
   }
-  100% {
-    transform: translateX(-100%);
+  to {
+    transform: translateX(-984px);
   }
 }
+
 
 @keyframes fadeIn {
   0% {
