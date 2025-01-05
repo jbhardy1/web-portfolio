@@ -22,7 +22,6 @@ const router = createRouter({
         title: 'About'
       }
     }
-
   ],
 })
 
