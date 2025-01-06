@@ -1,5 +1,6 @@
 <template>
   <div class="home-page">
+    <nav-bar class="nav-bar"/>
     <span class="intro fade-in">
       <h1 class="dev-name">Hi, I'm <strong class="first-name" @click="pushToAbout">Joshua</strong></h1>
       <h3 class="title">A Full-Stack Developer</h3>
@@ -12,6 +13,10 @@
     </span>
 
     <span class="tech-stack fade-in">
+      <div class="stack-head">
+        <i class="fa-solid fa-layer-group"></i>
+        <p>Tech Stack</p>
+      </div>
       <div class="tech-carousel">
         <div v-for="(icon, index) in icons" :key="index" class="tech-icon">
           <i :class="icon.iconClass"></i>
@@ -22,11 +27,15 @@
           <strong class="tech-name">{{ icon.name }}</strong>
         </div>
       </div>
+
     </span>
   </div>
 </template>
 
 <script>
+import NavBar
+
+from './NavBar.vue';
 export default {
   data() {
     return {
@@ -35,15 +44,15 @@ export default {
         { name: "Java", iconClass: "fab fa-java" },
         { name: "JavaScript", iconClass: "fab fa-js" },
         { name: "HTML", iconClass: "fab fa-html5" },
-        { name: "CSS", iconClass: "fab fa-css3-alt" },
         { name: "REST", iconClass: "fas fa-plug" },
         { name: "PostgreSQL", iconClass: "fas fa-database" },
-        { name: "PGAdmin", iconClass: "fas fa-cogs" },
+        { name: "CSS", iconClass: "fab fa-css3-alt" },
+        { name: "AWS", iconClass: "fa-brands fa-aws" }
       ],
       links: [
         {name: "GitHub", iconClass: "fab fa-github", url: "https://github.com/jbhardy1"},
         {name: "LinkedIn", iconClass: "fab fa-linkedin", url: "https://www.linkedin.com/in/jbhardy1/"},
-        {name: "Contact Me", iconClass: "fa fa-envelope"},
+        {name: "Resume", iconClass: "fa fa-file-text", url: "https://read.cv/jbhardy1"},
       ],
       currentIndex: 0,
     };
@@ -52,6 +61,9 @@ export default {
     pushToAbout() {
       this.$router.push({ name: 'about' });
     }
+  },
+  components: {
+    NavBar
   }
 };
 </script>
@@ -63,18 +75,29 @@ export default {
 }
 
 .home-page {
-  background-image: linear-gradient(to bottom right, #292929, #003049);
-  height: 1rem;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-columns: 1fr 1fr;
   min-height: 100vh;
-  display: flex;
-  justify-content: left;
+  gap: 20px;
+}
+
+.nav-bar {
+  grid-column: span 2;
+  align-self: center;
+  justify-self: center;
+  position: sticky;
+  top: 20px;
+  z-index: 10;
+  margin-top: 40px;
 }
 
 .intro {
-  margin-top: auto;
-  margin-bottom: auto;
-  margin-left: 15%;
-  margin-right: 20%;
+  grid-row: 2;
+  grid-column: 1;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20%;
 }
 
 .dev-name {
@@ -121,20 +144,45 @@ export default {
 }
 
 .tech-stack {
+  grid-row: 2;
+  grid-column: 2;
   display: flex;
+  flex-direction: column;
   justify-content: start;
   align-items: center;
-  margin-top: auto;
-  margin-bottom: auto;
-  width: 45%;
-  height: 33%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20%;
+  width: 80%;
+  height: 35%;
   border-style: solid;
   border-radius: 20px;
-  border-color: #292929;
+  border-color: #2f3a46;
   box-shadow: 0 8px 16px rgba(134, 133, 133, 0.2);
-  margin-right: 10%;
   flex-wrap: nowrap;
   overflow: hidden;
+  background-color: #292929;
+}
+
+.stack-head {
+  display: flex;
+  align-items: center;
+  height: 10%;
+  margin-top: 20px;
+  margin-right: auto;
+  margin-left: 20px;
+  margin-bottom: 40px;
+  padding: 10px;
+  border-style: solid;
+  border-width: 3px;
+  border-color: #2f3a46;
+  background-color: #132b38;
+  border-radius: 20px;
+  gap: 5px;
+}
+
+.stack-head:hover{
+  cursor:default;
 }
 
 .tech-carousel {
@@ -153,7 +201,7 @@ export default {
   font-size: 5rem;
 }
 
-.tech-icon i:hover{
+.tech-icon i:hover {
   transform: scale(1.2);
 }
 
@@ -172,7 +220,6 @@ export default {
   }
 }
 
-
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -188,3 +235,4 @@ export default {
   animation: fadeIn 1.5s ease-out forwards;
 }
 </style>
+
