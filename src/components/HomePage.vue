@@ -5,6 +5,7 @@
       <h1 class="dev-name">Hi, I'm <strong class="first-name" @click="pushToAbout">Joshua</strong></h1>
       <h3 class="title">A Full-Stack Developer</h3>
       <p class="summary">Utilizing Java, JavaScript, and Vue.Js to build full-stack applications.</p>
+      <h1>*** NOT A COMPLETE PROJECT ***</h1>
       <div v-for="(link, index) in links" :key="index" class="link-icons">
         <a :href="link.url" :title="link.name" target="_blank" rel="noopener noreferrer">
           <i :class="link.iconClass"></i>
