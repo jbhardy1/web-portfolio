@@ -34,7 +34,7 @@ export default{
   border-width: 2px;
   border-color: #2f3a46;
   background-color: #292929;
-  border-radius: 10px;
+  border-radius: 50px;
   height: 50px;
   width: auto;
   min-width: 20%;
@@ -52,6 +52,7 @@ export default{
 
 .nav-icon:hover{
   transform: scale(1.2);
+  cursor: pointer;
 }
 
 </style>

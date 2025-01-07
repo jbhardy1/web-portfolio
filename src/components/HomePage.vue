@@ -53,7 +53,7 @@ export default {
       links: [
         {name: "GitHub", iconClass: "fab fa-github", url: "https://github.com/jbhardy1"},
         {name: "LinkedIn", iconClass: "fab fa-linkedin", url: "https://www.linkedin.com/in/jbhardy1/"},
-        {name: "Resume", iconClass: "fa fa-file-text", url: "https://read.cv/jbhardy1"},
+        {name: "Full Resume/CV", iconClass: "fa fa-file-text", url: "https://read.cv/jbhardy1"},
       ],
       currentIndex: 0,
     };
