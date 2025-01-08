@@ -1,6 +1,6 @@
 <template>
   <div class="home-page">
-    <nav-bar class="nav-bar"/>
+    <nav-bar class="nav-bar" />
     <span class="intro fade-in">
       <h1 class="dev-name">Hi, I'm <strong class="first-name" @click="pushToAbout">Joshua</strong></h1>
       <h3 class="title">A Full-Stack Developer</h3>
@@ -23,20 +23,18 @@
           <i :class="icon.iconClass"></i>
           <strong class="tech-name">{{ icon.name }}</strong>
         </div>
-        <div v-for="(icon, index) in icons" :key=" 'duplicate-' + index" class="tech-icon">
+        <div v-for="(icon, index) in icons" :key="'duplicate-' + index" class="tech-icon">
           <i :class="icon.iconClass"></i>
           <strong class="tech-name">{{ icon.name }}</strong>
         </div>
       </div>
-
     </span>
   </div>
 </template>
 
 <script>
-import NavBar
+import NavBar from './NavBar.vue';
 
-from './NavBar.vue';
 export default {
   data() {
     return {
@@ -48,24 +46,23 @@ export default {
         { name: "REST", iconClass: "fas fa-plug" },
         { name: "PostgreSQL", iconClass: "fas fa-database" },
         { name: "CSS", iconClass: "fab fa-css3-alt" },
-        { name: "AWS", iconClass: "fa-brands fa-aws" }
+        { name: "AWS", iconClass: "fa-brands fa-aws" },
       ],
       links: [
-        {name: "GitHub", iconClass: "fab fa-github", url: "https://github.com/jbhardy1"},
-        {name: "LinkedIn", iconClass: "fab fa-linkedin", url: "https://www.linkedin.com/in/jbhardy1/"},
-        {name: "Full Resume/CV", iconClass: "fa fa-file-text", url: "https://read.cv/jbhardy1"},
+        { name: "GitHub", iconClass: "fab fa-github", url: "https://github.com/jbhardy1" },
+        { name: "LinkedIn", iconClass: "fab fa-linkedin", url: "https://www.linkedin.com/in/jbhardy1/" },
+        { name: "Full Resume/CV", iconClass: "fa fa-file-text", url: "https://read.cv/jbhardy1" },
       ],
-      currentIndex: 0,
     };
   },
   methods: {
     pushToAbout() {
       this.$router.push({ name: 'about' });
-    }
+    },
   },
   components: {
-    NavBar
-  }
+    NavBar,
+  },
 };
 </script>
 
@@ -99,6 +96,7 @@ export default {
   margin-left: auto;
   margin-right: auto;
   margin-top: 20%;
+  text-align: center;
 }
 
 .dev-name {
@@ -182,10 +180,6 @@ export default {
   gap: 5px;
 }
 
-.stack-head:hover{
-  cursor:default;
-}
-
 .tech-carousel {
   display: flex;
   width: 100%;
@@ -235,5 +229,36 @@ export default {
 .fade-in {
   animation: fadeIn 1.5s ease-out forwards;
 }
-</style>
 
+
+@media screen and (max-width: 768px) {
+
+  .home-page {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-bar {
+    width: 60%;
+    margin-top: 40px;
+    margin-bottom: -60px;
+  }
+
+  .intro {
+    width: 80%;
+    border-style: solid;
+    border-width: 3px;
+    border-color: #2f3a46;
+    background-color: #292929;
+    border-radius: 20px;
+    margin-bottom: -50px;
+    padding: 20px;
+  }
+
+  .tech-stack {
+    width: 90%;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+  }
+}
+</style>
