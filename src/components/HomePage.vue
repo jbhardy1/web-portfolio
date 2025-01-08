@@ -1,6 +1,6 @@
 <template>
   <div class="home-page">
-    <nav-bar class="nav-bar" />
+    <nav-bar class="nav-bar fade-in" />
     <span class="intro fade-in">
       <h1 class="dev-name">Hi, I'm <strong class="first-name" @click="pushToAbout">Joshua</strong></h1>
       <h3 class="title">A Full-Stack Developer</h3>
