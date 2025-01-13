@@ -2,13 +2,13 @@
   <div class="about-me">
     <nav-bar class="nav-bar" />
 
-    <div class="about-details">
-      <h3>About Me</h3>
-      <p>This is the details section about me.</p>
-    </div>
-
     <div class="about-education-experience">
       <div class="tabs">
+        <button
+        class="tab-button" :class="{active: activeTab === 'about'}"
+        @click="changeTab('about')"
+        > About Me
+        </button>
         <button
           class="tab-button"
           :class="{ active: activeTab === 'education' }"
@@ -23,6 +23,10 @@
         >
           Experience
         </button>
+      </div>
+      <div class="tab-content" v-if="activeTab === 'about'">
+        <h3>About Me</h3>
+        <p>Details about me go here</p>
       </div>
       <div class="tab-content" v-if="activeTab === 'education'">
         <h3>Education</h3>
@@ -63,10 +67,10 @@ export default {
 }
 
 .about-me {
-  display: grid;
-  grid-template-rows: auto 1fr;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
+  min-width: 50vw;
   gap: 20px;
 }
 
@@ -80,14 +84,6 @@ export default {
   margin-top: 40px;
 }
 
-.about-details {
-  background-color: red;
-  padding: 20px;
-  border-radius: 10px;
-  width: 80%;
-  margin: auto;
-  height: auto;
-}
 
 
 .about-education-experience {
@@ -95,7 +91,7 @@ export default {
   padding: 20px;
   border-radius: 10px;
   width: 80%;
-  height: 60%;
+  height: 80vh;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -107,17 +103,16 @@ export default {
   align-items: center;
   justify-content: flex-start;
   margin-bottom: 20px;
-  gap: 10px;
 }
 
 .tab-button {
-  background-color: #333;
+  background-color: #a5a5a5;
   padding: 10px 20px;
   border: none;
-  border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
-  color: #fff;
+  width: fit-content;
+  color: #000000;
 }
 
 .tab-button.active {
@@ -128,6 +123,7 @@ export default {
 
 .tab-content {
   background-color: white;
+  height: 80vh;
   padding: 15px;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -140,5 +136,13 @@ h3 {
 
 p {
   line-height: 1.6;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-bar {
+    width: 60%;
+    margin-top: 40px;
+    margin-bottom: 10px;
+  }
 }
 </style>
