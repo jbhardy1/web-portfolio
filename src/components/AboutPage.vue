@@ -2,6 +2,13 @@
   <div class="about-me">
     <nav-bar class="nav-bar" />
 
+    <div class="basic-info">
+      <img class="headshot" src="https://res.cloudinary.com/dwdijh29x/image/upload/v1736788525/headshot_kkldun.jpg" alt="headshot"></img>
+      <h2>Joshua Hardy</h2>
+      <h3>Full-Stack Developer / Student</h3>
+      <h4>Age: 24</h4>
+    </div>
+
     <div class="about-education-experience">
       <div class="tabs">
         <button
@@ -61,14 +68,15 @@ export default {
 </script>
 
 <style scoped>
+
 * {
-  color: rgb(206, 203, 203);
   font-family: Arial, Helvetica, sans-serif;
 }
 
 .about-me {
   display: flex;
   flex-direction: column;
+  text-align: center;
   min-height: 100vh;
   min-width: 50vw;
   gap: 20px;
@@ -82,12 +90,21 @@ export default {
   top: 20px;
   z-index: 10;
   margin-top: 40px;
+  color: white;
+}
+
+.basic-info{
+  color: white;
+}
+
+.headshot{
+  width: 10%;
+  border-radius: 50px;
 }
 
 
-
 .about-education-experience {
-  background-color: green;
+  background-color: #292929;
   padding: 20px;
   border-radius: 10px;
   width: 80%;
@@ -95,6 +112,7 @@ export default {
   margin: auto;
   display: flex;
   flex-direction: column;
+  text-align: start;
 }
 
 
@@ -106,7 +124,7 @@ export default {
 }
 
 .tab-button {
-  background-color: #a5a5a5;
+  background-color: #dbdbdb;
   padding: 10px 20px;
   border: none;
   cursor: pointer;
@@ -126,8 +144,7 @@ export default {
   height: 80vh;
   padding: 15px;
   border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  color: black;
+  color: rgb(0, 0, 0);
 }
 
 h3 {
