@@ -10,6 +10,7 @@
           <i :class="link.iconClass"></i>
         </a>
       </div>
+      <button class="learn-more-btn" @click.prevent="pushToAbout()">Explore</button>
     </span>
 
     <span class="tech-stack fade-in">
@@ -28,6 +29,7 @@
         </div>
       </div>
     </span>
+
   </div>
 </template>
 
@@ -50,7 +52,7 @@ export default {
       links: [
         { name: "GitHub", iconClass: "fab fa-github", url: "https://github.com/jbhardy1" },
         { name: "LinkedIn", iconClass: "fab fa-linkedin", url: "https://www.linkedin.com/in/jbhardy1/" },
-        { name: "Full Resume/CV", iconClass: "fa fa-file-text", url: "https://read.cv/jbhardy1" },
+        { name: "Full Resume/CV", iconClass: "fa fa-file-text", url: "https://read.cv/jbhardy1" }
       ],
     };
   },
@@ -102,15 +104,6 @@ export default {
   font-size: xx-large;
 }
 
-.first-name {
-  text-decoration: underline;
-}
-
-.first-name:hover {
-  cursor: pointer;
-  color: whitesmoke;
-}
-
 .title {
   font-size: x-large;
 }
@@ -121,7 +114,7 @@ export default {
 
 .link-icons {
   display: inline-block;
-  gap: 15px;
+  margin: 3px;
 }
 
 .link-icons i {
@@ -138,6 +131,25 @@ export default {
 
 .link-icons i:hover {
   transform: scale(1.2);
+  cursor: pointer;
+}
+
+
+.learn-more-btn{
+  font-size: 2rem;
+  padding: 8px;
+  border: 2px solid #fff;
+  border-radius: 10%;
+  background-color: #003049;
+  transition: transform 0.3s ease;
+  margin-top: 5px;
+  margin-right: 10px;
+  box-shadow: 0 8px 16px rgba(134, 133, 133, 0.2);
+  margin-left: 5px;
+}
+
+.learn-more-btn:hover{
+  transform: scale(1.1);
   cursor: pointer;
 }
 

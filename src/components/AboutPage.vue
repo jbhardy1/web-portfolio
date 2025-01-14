@@ -1,12 +1,11 @@
 <template>
-  <div class="about-me">
+  <div class="about-me fade-in">
     <nav-bar class="nav-bar" />
 
     <div class="basic-info">
-      <img class="headshot" src="https://res.cloudinary.com/dwdijh29x/image/upload/v1736788525/headshot_kkldun.jpg" alt="headshot"></img>
+      <img class="headshot" src="https://res.cloudinary.com/dwdijh29x/image/upload/v1736788525/headshot_kkldun.jpg" alt="headshot"/>
       <h2>Joshua Hardy</h2>
-      <h3>Full-Stack Developer / Student</h3>
-      <h4>Age: 24</h4>
+      <h3>Full-Stack Developer / Student / Veteran</h3>
     </div>
 
     <div class="about-education-experience">
@@ -53,7 +52,7 @@ import NavBar from "./NavBar.vue";
 export default {
   data() {
     return {
-      activeTab: "education", // Default tab
+      activeTab: "about", // Default tab
     };
   },
   components: {
@@ -77,9 +76,10 @@ export default {
   display: flex;
   flex-direction: column;
   text-align: center;
-  min-height: 100vh;
+  min-height: 80vh;
   min-width: 50vw;
   gap: 20px;
+  margin-bottom: 10px;
 }
 
 .nav-bar {
@@ -99,15 +99,13 @@ export default {
 
 .headshot{
   width: 10%;
-  border-radius: 50px;
+  border-radius: 100px;
 }
 
 
 .about-education-experience {
-  background-color: #292929;
-  padding: 20px;
   border-radius: 10px;
-  width: 80%;
+  width: 60%;
   height: 80vh;
   margin: auto;
   display: flex;
@@ -115,12 +113,10 @@ export default {
   text-align: start;
 }
 
-
 .tabs {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  margin-bottom: 20px;
 }
 
 .tab-button {
@@ -143,7 +139,6 @@ export default {
   background-color: white;
   height: 80vh;
   padding: 15px;
-  border-radius: 5px;
   color: rgb(0, 0, 0);
 }
 
@@ -153,6 +148,21 @@ h3 {
 
 p {
   line-height: 1.6;
+}
+
+.fade-in {
+  animation: fadeIn 1.5s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @media screen and (max-width: 768px) {
