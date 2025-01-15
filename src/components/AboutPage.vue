@@ -5,7 +5,7 @@
     <div class="basic-info">
       <img class="headshot" src="https://res.cloudinary.com/dwdijh29x/image/upload/v1736788525/headshot_kkldun.jpg" alt="headshot"/>
       <h2>Joshua Hardy</h2>
-      <h3>Full-Stack Developer / Student / Veteran</h3>
+      <h4>Full-Stack Developer</h4>
     </div>
 
     <div class="about-education-experience">
@@ -32,11 +32,20 @@
       </div>
       <div class="tab-content" v-if="activeTab === 'about'">
         <h3>About Me</h3>
-        <p>Details about me go here</p>
+        <p>I am a dedicated software developer with a strong foundation in Java, SQL, and Vue.js, currently pursuing a Bachelor of Science in Computer Science at the University of Cincinnati.
+          As a U.S. Marine Corps veteran and graduate of Tech Elevator’s full-stack development bootcamp, I bring a unique blend of discipline, problem-solving skills, and technical expertise to every project.
+          My experience includes building full-stack applications like Sprout and Flashcard Mania, where I focused on creating responsive user interfaces and scalable back-end systems.
+          I thrive in collaborative, Agile environments and am passionate about developing innovative, user-focused solutions that deliver real-world impact.
+          With a commitment to continuous learning, I’m always eager to expand my skill set and tackle new challenges in the ever-evolving tech landscape.</p>
       </div>
       <div class="tab-content" v-if="activeTab === 'education'">
         <h3>Education</h3>
-        <p>Details about education go here.</p>
+        <div class="ed-institutes" v-for="(education, index) in education" :key="index">
+        <ul>
+          <li >{{ education.school }}</li>
+          <p>{{ education.attended }}</p>
+        </ul>
+        </div>
       </div>
       <div class="tab-content" v-if="activeTab === 'experience'">
         <h3>Experience</h3>
@@ -53,6 +62,12 @@ export default {
   data() {
     return {
       activeTab: "about", // Default tab
+      education: [
+        {school: 'University of Cincinnati', attended: 'Jan/2025 - Present', focus: 'B.S in Computer Science', description: 'Currently attending, pursuing a B.S in Computer Science.'},
+        {school: 'Tech Elevator', attended: 'Sept/2024 - Dec/2024', focus: 'Certificate in Full-Stack Development', description: 'A Full-stack bootcamp designing software systems and solutions with 800+ hours of education and application.', skills: 'OOP, Java, HTML, CSS, JavaScript, Spring Boot, Vue.js, SQL, PostgreSQL, JUnit, Git, Agile.'},
+        {school: 'Southern New Hampshire University', attended: 'May/2022 - May/2024', focus: 'B.S in Computer Science', description: 'Attend SNHU while serving Active Duty through utilizaiton of Tuition Assistance. Accrued 80 credits towards completion of my B.S.', skills: 'Python, C++, SDLC'},
+        {school: 'University of Mississippi', attended: 'Aug/2019 - Aug/2020', focus: 'B.S in Computer Science', description: 'Began my B.S in Computer Science, accruing 27 credits towards completion before enlisting in the United States Marine Corps.', skills: 'Java, Public Speaking, Public Relations, Networking, IT Solutions'}
+      ]
     };
   },
   components: {
@@ -137,12 +152,16 @@ export default {
 
 .tab-content {
   background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
   height: 80vh;
   padding: 15px;
   color: rgb(0, 0, 0);
 }
 
 h3 {
+  font-size: xx-large;
   margin-bottom: 10px;
 }
 
