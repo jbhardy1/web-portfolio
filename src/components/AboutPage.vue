@@ -126,20 +126,22 @@ export default {
   display: flex;
   flex-direction: column;
   text-align: start;
+  border-radius: 15px;
+  background-color: white;
 }
 
 .tabs {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  margin-top: 10px;
+  margin-left: 5px;
 }
 
 .tab-button {
-  background-color: #dbdbdb;
   padding: 10px 20px;
   border: none;
   cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
   width: fit-content;
   color: #000000;
 }
@@ -151,7 +153,6 @@ export default {
 }
 
 .tab-content {
-  background-color: white;
   display: flex;
   flex-direction: column;
   justify-content: start;
