@@ -1,36 +1,7 @@
 # web-portfolio
+A simple web-portfolio developed using Vite + Vue.Js. This is still in progress, and not a complete project.
 
-This template should help get you started developing with Vue 3 in Vite.
-
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
-# Web-Portfolio
+## Features
+A home page with navigation links and animated tech stack container.
+An about page with a tabbed container for navigation, featuring information about me, my education, and my technical experience.
+A project page featuring live and demo projects I've completed. It describes the project, lists the technologies used to develop, and names any collaborators for the project.
