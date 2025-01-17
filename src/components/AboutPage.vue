@@ -11,14 +11,11 @@
 
       <div class="about-education-experience">
         <div class="tabs">
-          <button class="tab-button" :class="{ active: activeTab === 'about' }" @click="changeTab('about')">
+          <button class="tab-button" :class="{ active: activeTab === 'about' }" @click.prevent="changeTab('about')">
             About Me
           </button>
-          <button class="tab-button" :class="{ active: activeTab === 'education' }" @click="changeTab('education')">
+          <button class="tab-button" :class="{ active: activeTab === 'education' }" @click.prevent="changeTab('education')">
             Education
-          </button>
-          <button class="tab-button" :class="{ active: activeTab === 'experience' }" @click="changeTab('experience')">
-            Experience
           </button>
         </div>
         <div class="tab-content" v-if="activeTab === 'about'">
@@ -32,9 +29,18 @@
           <div class="goals-section">
             <h3>Current Goals</h3>
             <ul>
+              <li>Find my first Software Development Job.</li>
               <li>Expand expertise in cloud computing and AI/ML technologies.</li>
+                <ul class="sub-list">
+                  <li>Currently, I'm studying for my AWS CLF-CO2 exam and expect to test out for my certification on Feb. 2nd.</li>
+                </ul>
               <li>Complete my Bachelor of Science in Computer Science by 2027.</li>
               <li>Contribute to open-source projects that focus on community impact.</li>
+                <ul class="sub-list">
+                  <li>I recently commited to learning WordPress to assist in the overhaul of the web presence of
+                    <a href="https://called2grow.org/" rel="noopener noreferrer" target="_blank">Called2Grow</a>
+                    , a non-proffit organization focused on assisting families in overcoming substance abuse and addiction.</li>
+                </ul>
             </ul>
           </div>
           <div class="hobbies-section">
@@ -65,10 +71,6 @@
             </ul>
           </div>
         </div>
-        <div class="tab-content" v-if="activeTab === 'experience'">
-          <h3>Experience</h3>
-          <p>Details about experience go here.</p>
-        </div>
       </div>
     </div>
   </div>
@@ -80,7 +82,7 @@ import NavBar from "./NavBar.vue";
 export default {
   data() {
     return {
-      activeTab: "education",
+      activeTab: "about",
       education: [
         { logo: 'https://res.cloudinary.com/dwdijh29x/image/upload/v1737129471/uc_uozokm.webp', school: 'University of Cincinnati', attended: 'Jan \'25 - Present', focus: 'B.S in Computer Science', description: 'Currently attending, pursuing a B.S in Computer Science.', skills: "Binary, AWS, Cloud Computing, IT, Mathematics" },
         { logo: 'https://res.cloudinary.com/dwdijh29x/image/upload/v1737129677/techElogo_nbwiy1-removebg-preview_kvgen9.png', school: 'Tech Elevator', attended: 'Sept \'24 - Dec \'24', focus: 'Certificate in Full-Stack Development', description: 'A Full-stack bootcamp designing software systems and solutions with 800+ hours of education and application.', skills: 'OOP, Java, HTML, CSS, JavaScript, Spring Boot, Vue.js, SQL, PostgreSQL, JUnit, Git, Agile.' },
@@ -201,13 +203,21 @@ ul {
 
 .goals-section ul,
 .hobbies-section ul {
-  list-style-type: disc;
   padding-left: 20px;
 }
 
 .hobbies-section p,
 .goals-section p {
   margin-bottom: 10px;
+}
+
+.hobbies-section li,
+.goals-section li {
+  margin-bottom: 10px;
+}
+
+.sub-list {
+  list-style: square;
 }
 
 .ed-institutes {
