@@ -255,17 +255,28 @@ ul {
 }
 
 @media screen and (max-width: 768px) {
+
+  .nav-bar {
+    width: 60%;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .content-wrapper {
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .basic-info {
     width: 100%;
-    margin-right: 0;
   }
 
   .about-education-experience {
-    width: 100%;
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 </style>
