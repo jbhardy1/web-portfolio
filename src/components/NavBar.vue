@@ -35,11 +35,11 @@ export default{
   border-color: #2f3a46;
   background-color: #292929;
   border-radius: 50px;
-  height: 50px;
+  height: 40px;
   width: auto;
-  min-width: 20%;
+  min-width: 15%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   flex-direction: row;
   margin-left: auto;
@@ -47,7 +47,7 @@ export default{
 }
 
 .nav-icon{
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 .nav-icon:hover{

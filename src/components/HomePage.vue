@@ -139,7 +139,7 @@ export default {
   font-size: 2rem;
   padding: 8px;
   border: 2px solid #fff;
-  border-radius: 10%;
+  border-radius: 15px;
   background-color: #003049;
   transition: transform 0.3s ease;
   margin-top: 5px;
@@ -172,6 +172,7 @@ export default {
   flex-wrap: nowrap;
   overflow: hidden;
   background-color: #292929;
+  padding-bottom: 30px;
 }
 
 .stack-head {
@@ -181,7 +182,7 @@ export default {
   margin-top: 20px;
   margin-right: auto;
   margin-left: 20px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   padding: 10px;
   border-style: solid;
   border-width: 3px;
