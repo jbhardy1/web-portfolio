@@ -35,7 +35,7 @@ export default{
   border-color: #2f3a46;
   background-color: #292929;
   border-radius: 50px;
-  height: 40px;
+  min-height: 50px;
   width: auto;
   min-width: 15%;
   display: flex;

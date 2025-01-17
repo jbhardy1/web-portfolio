@@ -268,9 +268,15 @@ ul {
 
   .nav-bar {
     width: 60%;
+    height: 100%;
     margin-top: 40px;
+    margin-bottom: 10px;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .about-me {
+    height: 100%;
   }
 
   .content-wrapper {
