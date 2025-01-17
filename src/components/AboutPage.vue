@@ -42,8 +42,13 @@
         <h3>Education</h3>
         <div class="ed-institutes" v-for="(education, index) in education" :key="index">
         <ul>
+          <img :src="education.logo" class="edu-logo"/>
           <li >{{ education.school }}</li>
-          <p>{{ education.attended }}</p>
+          <p class="date">{{ education.attended }}</p>
+          <ul>
+            <li> {{ education.focus }} </li>
+            <li> {{ education.description }} </li>
+          </ul>
         </ul>
         </div>
       </div>
@@ -63,10 +68,10 @@ export default {
     return {
       activeTab: "about", // Default tab
       education: [
-        {school: 'University of Cincinnati', attended: 'Jan/2025 - Present', focus: 'B.S in Computer Science', description: 'Currently attending, pursuing a B.S in Computer Science.'},
-        {school: 'Tech Elevator', attended: 'Sept/2024 - Dec/2024', focus: 'Certificate in Full-Stack Development', description: 'A Full-stack bootcamp designing software systems and solutions with 800+ hours of education and application.', skills: 'OOP, Java, HTML, CSS, JavaScript, Spring Boot, Vue.js, SQL, PostgreSQL, JUnit, Git, Agile.'},
-        {school: 'Southern New Hampshire University', attended: 'May/2022 - May/2024', focus: 'B.S in Computer Science', description: 'Attend SNHU while serving Active Duty through utilizaiton of Tuition Assistance. Accrued 80 credits towards completion of my B.S.', skills: 'Python, C++, SDLC'},
-        {school: 'University of Mississippi', attended: 'Aug/2019 - Aug/2020', focus: 'B.S in Computer Science', description: 'Began my B.S in Computer Science, accruing 27 credits towards completion before enlisting in the United States Marine Corps.', skills: 'Java, Public Speaking, Public Relations, Networking, IT Solutions'}
+        {logo: 'https://res.cloudinary.com/dwdijh29x/image/upload/v1737122601/UC_logo_ejs3wy.jpg', school: 'University of Cincinnati', attended: 'Jan \'25 - Present', focus: 'B.S in Computer Science', description: 'Currently attending, pursuing a B.S in Computer Science.'},
+        {logo: 'https://res.cloudinary.com/dwdijh29x/image/upload/v1737122601/techElogo_nbwiy1.png', school: 'Tech Elevator', attended: 'Sept \'24 - Dec \'24', focus: 'Certificate in Full-Stack Development', description: 'A Full-stack bootcamp designing software systems and solutions with 800+ hours of education and application.', skills: 'OOP, Java, HTML, CSS, JavaScript, Spring Boot, Vue.js, SQL, PostgreSQL, JUnit, Git, Agile.'},
+        {logo: 'https://res.cloudinary.com/dwdijh29x/image/upload/v1737122601/snhu_logo_jbyuji.webp', school: 'Southern New Hampshire University', attended: 'May \'22 - May \'24', focus: 'B.S in Computer Science', description: 'Attend SNHU while serving Active Duty through utilizaiton of Tuition Assistance. Accrued 80 credits towards completion of my B.S.', skills: 'Python, C++, SDLC'},
+        {logo: 'https://res.cloudinary.com/dwdijh29x/image/upload/v1737122601/olemisslogo_cs7i9t.png', school: 'University of Mississippi', attended: 'Aug \'19 - Aug \'20', focus: 'B.S in Computer Science', description: 'Began my B.S in Computer Science, accruing 27 credits towards completion before enlisting in the United States Marine Corps.', skills: 'Java, Public Speaking, Public Relations, Networking, IT Solutions'}
       ]
     };
   },
@@ -159,6 +164,12 @@ export default {
   height: 80vh;
   padding: 15px;
   color: rgb(0, 0, 0);
+  overflow: auto;
+}
+
+.edu-logo{
+  width: 50px;
+  height: 50px;
 }
 
 h3 {
@@ -172,6 +183,11 @@ p {
 
 .fade-in {
   animation: fadeIn 1.5s ease-out forwards;
+}
+
+.date{
+  font-style: italic;
+  font-size: small;
 }
 
 @keyframes fadeIn {
