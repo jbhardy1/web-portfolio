@@ -2,7 +2,6 @@
   <div class="projects-page">
     <nav-bar class="nav-bar"/>
     <div class="main-container">
-
         <div class="tab-container">
           <div v-for="(project, index) in projects" :key="index">
             <button @click="selectProject(index)" class="tab-button">
@@ -20,6 +19,7 @@
                   :src="selectedProject.images[selectedImageIndex]"
                   :alt="`Project Image ${selectedImageIndex + 1}`"
                   class="main-image"
+                  @click="expandImage"
                 />
               </div>
               <div class="thumbnails">
@@ -43,6 +43,14 @@
         </div>
 
     </div>
+
+    <div v-if="isImageExpanded" class="expanded-image-container" @click="closeExpandedImage">
+      <img
+        :src="selectedProject.images[selectedImageIndex]"
+        :alt="`Expanded Image ${selectedImageIndex + 1}`"
+        class="expanded-image"
+      />
+    </div>
   </div>
 </template>
 
@@ -54,6 +62,7 @@ export default {
     return {
       selectedImageIndex: 0,
       selectedProject: null,
+      isImageExpanded: false,
       projects: [
         {
           name: 'Sprout',
@@ -66,6 +75,18 @@ export default {
           description: 'Sprout is a final capstone project developed during my time at Tech Elevator. The app helps individuals grow their own garden-to-table plants, promoting sustainability through easy-to-use features like garden management, plant growth tracking, and personalized gardening tips from GAIA. Powered by Google Gemini, GAIA can answer any plant-related queries, while the app’s interactive zoning map helps users identify optimal planting zones based on their location.',
           stack: 'Vue.JS, Java, Spring Boot, PostgreSQL, Google Gemini',
           repository: 'https://github.com/jbhardy1/SproutApp'
+        },
+        {
+          name: 'Tenmo',
+          icon: 'https://res.cloudinary.com/dwdijh29x/image/upload/v1737129677/techElogo_nbwiy1-removebg-preview_kvgen9.png',
+          images: [
+            'https://res.cloudinary.com/dwdijh29x/image/upload/v1737269235/Tenmo_erd_vibduu.png',
+            'https://res.cloudinary.com/dwdijh29x/image/upload/v1737269235/Register-Login_d53s20.png',
+            'https://res.cloudinary.com/dwdijh29x/image/upload/v1737269235/Bal-Send_vo6ixl.png'
+          ],
+          description: 'Tenmo is a secure and user-friendly money transfer service designed to simplify digital transactions. Upon registration, users are granted a starting balance of $1000 TENMObucks, which they can use to send or request money from other registered users within the Tenmo network. With a focus on security, Tenmo ensures that all transactions are processed safely, providing users with peace of mind as they manage their finances. Whether you\'re sending money to a friend or requesting funds for a shared expense, Tenmo makes peer-to-peer payments fast, easy, and secure.',
+          stack: 'Java, Spring Boot, PostgreSQL, SQL',
+          repository: 'https://github.com/jbhardy1/M2CapstoneTE'
         }
       ]
     };
@@ -77,6 +98,12 @@ export default {
     },
     changeImage(index) {
       this.selectedImageIndex = index;
+    },
+    expandImage() {
+      this.isImageExpanded = true;
+    },
+    closeExpandedImage() {
+      this.isImageExpanded = false;
     }
   },
   mounted() {
@@ -127,9 +154,10 @@ export default {
 
 .tab-container {
   border-right: solid;
+  border-radius: 15px;
   border-color: #2f3a46;
   background-color: #252525;
-  width: 20%;
+  min-width: 10%;
   display: flex;
   flex-direction: column;
   padding: 10px;
@@ -142,7 +170,7 @@ export default {
   background-color: #292929;
   color: #fff;
   border: none;
-  padding: 10px;
+  padding: 15px;
   margin-bottom: 10px;
   border-radius: 10px;
   cursor: pointer;
@@ -179,9 +207,9 @@ export default {
 }
 
 .main-image {
-  width: 100%;
+  min-width: 100%;
   max-width: 700px;
-  height: 70%;
+  min-height: 70%;
   border-radius: 10px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
@@ -220,6 +248,27 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+
+.expanded-image-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 20;
+}
+
+.expanded-image {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 @media (max-width: 768px) {
