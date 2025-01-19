@@ -73,7 +73,7 @@ export default {
             'https://res.cloudinary.com/dwdijh29x/image/upload/v1735373728/sprout_garden_gaia_qdx27w.png'
           ],
           description: 'Sprout is a final capstone project developed during my time at Tech Elevator. The app helps individuals grow their own garden-to-table plants, promoting sustainability through easy-to-use features like garden management, plant growth tracking, and personalized gardening tips from GAIA. Powered by Google Gemini, GAIA can answer any plant-related queries, while the app’s interactive zoning map helps users identify optimal planting zones based on their location.',
-          stack: 'Vue.JS, Java, Spring Boot, PostgreSQL, Google Gemini',
+          stack: 'Vue.JS, Javascript, HTML, CSS, Java, Spring Boot, PostgreSQL, RESTful API, Google Gemini.',
           repository: 'https://github.com/jbhardy1/SproutApp'
         },
         {
@@ -85,8 +85,19 @@ export default {
             'https://res.cloudinary.com/dwdijh29x/image/upload/v1737269235/Bal-Send_vo6ixl.png'
           ],
           description: 'Tenmo is a secure and user-friendly money transfer service designed to simplify digital transactions. Upon registration, users are granted a starting balance of $1000 TENMObucks, which they can use to send or request money from other registered users within the Tenmo network. With a focus on security, Tenmo ensures that all transactions are processed safely, providing users with peace of mind as they manage their finances. Whether you\'re sending money to a friend or requesting funds for a shared expense, Tenmo makes peer-to-peer payments fast, easy, and secure.',
-          stack: 'Java, Spring Boot, PostgreSQL, SQL',
+          stack: 'Java, Spring Boot, PostgreSQL, JDBC, RESTful API.',
           repository: 'https://github.com/jbhardy1/M2CapstoneTE'
+        },
+        {
+          name: 'WebPortfolio',
+          icon: 'https://res.cloudinary.com/dwdijh29x/image/upload/v1737270197/JA-removebg-preview_ayqgs8.png',
+          images : [
+            'https://res.cloudinary.com/dwdijh29x/image/upload/v1737269952/Web-home_p9cvr9.png',
+            'https://res.cloudinary.com/dwdijh29x/image/upload/v1737269952/Web-about_zbecal.png',
+            'https://res.cloudinary.com/dwdijh29x/image/upload/v1737269952/Web-project_f9nazt.png'
+          ],
+          description: 'My web portfolio was created to showcase who I am, my skills, and the journey I’ve taken in my professional development. It houses detailed information about my education and experience, giving insight into my work and personal projects. The creation of this portfolio also provided me with a valuable learning experience, where I dove deeper into Cloud Computing with AWS, specifically CloudFront and Amplify. This allowed me to expand my knowledge of version control, CI/CD, and hosting applications, giving me hands-on expertise in cloud technologies and modern development practices',
+          stack: 'Vue.js, Javascript, HTML, CSS, AWS.'
         }
       ]
     };
