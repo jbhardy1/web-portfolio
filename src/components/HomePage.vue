@@ -10,7 +10,6 @@
           <i :class="link.iconClass"></i>
         </a>
       </div>
-      <button class="learn-more-btn" @click.prevent="pushToAbout()">Explore</button>
     </span>
 
     <span class="tech-stack fade-in">
@@ -134,25 +133,6 @@ export default {
   cursor: pointer;
 }
 
-
-.learn-more-btn{
-  font-size: 2rem;
-  padding: 8px;
-  border: 2px solid #fff;
-  border-radius: 15px;
-  background-color: #003049;
-  transition: transform 0.3s ease;
-  margin-top: 5px;
-  margin-right: 10px;
-  box-shadow: 0 8px 16px rgba(134, 133, 133, 0.2);
-  margin-left: 5px;
-}
-
-.learn-more-btn:hover{
-  transform: scale(1.1);
-  cursor: pointer;
-}
-
 .tech-stack {
   grid-row: 2;
   grid-column: 2;
@@ -172,7 +152,6 @@ export default {
   flex-wrap: nowrap;
   overflow: hidden;
   background-color: #292929;
-  padding-bottom: 30px;
 }
 
 .stack-head {

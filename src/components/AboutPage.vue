@@ -50,7 +50,7 @@
             </p>
             <ul>
               <li>Reading, mostly fiction but I also enjoy reading about new technologies/coding languages.</li>
-              <li>3D Printing, I'm an avid hobbiest and print a plethora of unique things with my FDM and Resing Printers.</li>
+              <li>3D Printing, I'm an avid hobbiest and print a plethora of unique things with my FDM and Resin Printers.</li>
               <li>Dungeons and Dragons. I enjoy having a creative outlet to unwind and socialize with friends and strangers - there's nothing better than D&D!</li>
               <li>Playing strategy games and solving puzzles to unwind. I'm a huge fan of CRPG's and Simulation games such as Baldur's Gate and Civ IV. I'm also (basically) a wordle champ.</li>
             </ul>

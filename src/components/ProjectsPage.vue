@@ -1,12 +1,13 @@
 <template>
   <div class="projects-page">
     <nav-bar class="nav-bar"/>
-    <h1>Projects Go Here</h1>
+    <under-construction class="under-const"/>
 </div>
 </template>
 
 <script>
 import NavBar from '@/components/NavBar.vue';
+import UnderConstruction from '@/components/UnderConstruction.vue'
 
 export default{
   data(){
@@ -15,7 +16,8 @@ export default{
     }
   },
   components: {
-        NavBar
+        NavBar,
+        UnderConstruction
       }
 }
 
@@ -29,21 +31,24 @@ export default{
 }
 
 .projects-page{
-  display: grid;
-  grid-template-rows: auto 1fr;
-  grid-template-columns: 1fr 1fr;
-  min-height: 100vh;
-  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 
 .nav-bar {
-  grid-column: span 2;
   align-self: center;
   justify-self: center;
   position: sticky;
   top: 20px;
   z-index: 10;
   margin-top: 40px;
+}
+
+.under-const {
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 </style>
