@@ -206,7 +206,6 @@ export default {
   flex-grow: 1;
   overflow: auto;
 }
-
 .image-scroll {
   display: flex;
   flex-direction: column;
@@ -225,6 +224,10 @@ export default {
   min-height: 70%;
   border-radius: 10px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.main-image:hover{
+  cursor: pointer;
 }
 
 .thumbnails {
@@ -256,7 +259,7 @@ li {
 }
 
 a {
-  color: #4CAF50;
+  color: #9dbcdd;
 }
 
 a:hover {
@@ -302,12 +305,34 @@ a:hover {
 @media (max-width: 768px) {
   .main-container {
     flex-direction: column;
-    width: 100%;
+    width: 80%;
+  }
+
+  .nav-bar {
+    width: 60%;
+    margin-top: 40px;
+  }
+
+  .project-info{
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
   }
 
   .tab-container {
-    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    width: auto;
+    margin-bottom: 15px;
     border-right: none;
+  }
+
+  .tab-button{
+    min-width: 150px;
+  }
+
+  .main-image{
+    width: 400px;
   }
 }
 </style>
