@@ -320,19 +320,23 @@ a:hover {
   }
 
   .tab-container {
-    flex-direction: row;
-    justify-content: space-around;
+    flex-direction: column;
     width: auto;
     margin-bottom: 15px;
     border-right: none;
   }
 
   .tab-button{
-    min-width: 150px;
+    size: 1rem;
   }
 
   .main-image{
-    width: 400px;
+    width: 200px;
+  }
+
+  .thumbnails{
+    width: 100%;
+    overflow: auto;
   }
 }
 </style>
