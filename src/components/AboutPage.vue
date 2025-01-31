@@ -1,7 +1,6 @@
 <template>
   <div class="about-me fade-in">
     <nav-bar class="nav-bar" />
-
     <div class="content-wrapper">
       <div class="basic-info">
         <img class="headshot" src="https://res.cloudinary.com/dwdijh29x/image/upload/v1736788525/headshot_kkldun.jpg" alt="headshot" />

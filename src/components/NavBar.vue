@@ -1,8 +1,11 @@
 <template>
   <div class="navbar">
     <div v-for="(icon, index) in icons" :key="index" class="nav-icon">
-         <a :title="icon.title"> <i :class="icon.iconClass" @click="pushToPage(icon.name)"></i> </a>
-        </div>
+        <a :title="icon.title"> <i :class="icon.iconClass" @click="pushToPage(icon.name)"></i> </a>
+    </div>
+    <div class="nav-icon">
+        <a title = "Contact Me" href="mailto:jhardybuis@gmail.com?subject=Looking to Connect!"><i class="fa-solid fa-envelope"></i></a>
+    </div>
   </div>
 </template>
 
@@ -13,8 +16,7 @@ export default{
       icons: [
         {name: 'home', iconClass: 'fa-solid fa-house', title: 'Home'},
         {name: 'about', iconClass: 'fa-solid fa-user', title: 'About Me'},
-        {name: 'projects', iconClass: 'fa fa-briefcase', title: 'Projects'},
-        {name: 'contact', iconClass: 'fa-solid fa-envelope', title: 'Contact Me'}
+        {name: 'projects', iconClass: 'fa fa-briefcase', title: 'Projects'}
       ]
     }
   },
@@ -48,6 +50,10 @@ export default{
 
 .nav-icon{
   font-size: 1rem;
+}
+
+.nav-icon a{
+  color: white;
 }
 
 .nav-icon:hover{
