@@ -154,7 +154,6 @@ export default {
   flex-direction: row;
   border-style: solid;
   border-radius: 15px;
-  background-color: white;
   margin-left: auto;
   margin-right: auto;
   height: 80%;

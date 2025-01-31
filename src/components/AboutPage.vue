@@ -103,6 +103,7 @@ export default {
 
 <style scoped>
 * {
+  color: rgb(206, 203, 203);
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -142,6 +143,7 @@ ul {
   padding: 20px;
   margin-right: 20px;
   color: whitesmoke;
+
 }
 
 .headshot {
@@ -153,7 +155,7 @@ ul {
 .about-education-experience {
   width: 60%;
   padding: 15px;
-  background-color: whitesmoke;
+  background-color: #292929;
   border-radius: 15px;
   margin-right: 30px;
   min-height: 70%;
@@ -169,13 +171,13 @@ ul {
   padding: 10px 20px;
   border: 1px solid #000;
   border-radius: 5px;
-  background-color: #f0f0f0;
+  background-color: #373e41;
   cursor: pointer;
-  color: black;
+  color: rgb(255, 255, 255);
 }
 
 .tab-button.active {
-  background-color: #d0d0d0;
+  background-color: #6f787c;;
   font-weight: bold;
 }
 
@@ -196,7 +198,7 @@ ul {
 .goals-section h3,
 .hobbies-section h3 {
   margin-bottom: 10px;
-  color: #333;
+  color: #bcbcbc;
   font-size: 1.25rem;
 }
 
