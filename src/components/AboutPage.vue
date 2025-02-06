@@ -28,18 +28,13 @@
           <div class="goals-section">
             <h3>Current Goals</h3>
             <ul>
-              <li>Find my first Software Development Job.</li>
               <li>Expand expertise in cloud computing and AI/ML technologies.</li>
                 <ul class="sub-list">
-                  <li>Currently, I'm studying for my AWS CLF-CO2 exam and expect to test out for my certification on Feb. 2nd.</li>
+                  <li>Currently, I'm studying for my AWS Cloud Practitioner certification</li>
                 </ul>
               <li>Complete my Bachelor of Science in Computer Science by 2027.</li>
               <li>Contribute to open-source projects that focus on community impact.</li>
-                <ul class="sub-list">
-                  <li>I recently commited to learning WordPress to assist in the overhaul of the web presence of
-                    <a href="https://called2grow.org/" rel="noopener noreferrer" target="_blank">Called2Grow</a>
-                    , a non-proffit organization focused on assisting families in overcoming substance abuse and addiction.</li>
-                </ul>
+
             </ul>
           </div>
           <div class="hobbies-section">
