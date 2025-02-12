@@ -5,7 +5,7 @@
       <div class="basic-info">
         <img class="headshot" src="https://res.cloudinary.com/dwdijh29x/image/upload/v1736788525/headshot_kkldun.jpg" alt="headshot" />
         <h2>Joshua Hardy</h2>
-        <h4>Full-Stack Developer</h4>
+        <h4>Software Engineer</h4>
       </div>
 
       <div class="about-education-experience">
@@ -21,7 +21,7 @@
           <div class="about-section">
             <h3>About Me</h3>
             <p>
-              I am a dedicated software developer with a strong foundation in Java, SQL, and Vue.js, currently pursuing a Bachelor of Science in Computer Science at the University of Cincinnati.
+              I am a dedicated software engineer with a strong foundation in Java, SQL, and Vue.js, currently pursuing a Bachelor of Science in Computer Science at the University of Cincinnati.
               As a U.S. Marine Corps veteran and a graduate of Tech Elevator’s full-stack development bootcamp, I bring a unique blend of discipline, problem-solving skills, and technical expertise to every project.
             </p>
           </div>

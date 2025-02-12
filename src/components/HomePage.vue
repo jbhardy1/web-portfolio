@@ -3,7 +3,7 @@
     <nav-bar class="nav-bar fade-in" />
     <span class="intro fade-in">
       <h1 class="dev-name">Hi, I'm <strong class="first-name" @click="pushToAbout">Joshua</strong></h1>
-      <h3 class="title">A Full-Stack Developer</h3>
+      <h3 class="title">A Software Engineer</h3>
       <p class="summary">Utilizing Java, JavaScript, and Vue.Js to build full-stack applications.</p>
       <div v-for="(link, index) in links" :key="index" class="link-icons">
         <a :href="link.url" :title="link.name" target="_blank" rel="noopener noreferrer">
